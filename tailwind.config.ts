@@ -10,7 +10,8 @@ export default {
 			},
 			colors: {
 				crimson: '#bf0120',
-				lightblue: '#00ffff'
+				lightblue: '#00ffff',
+				'linkedin-blue': '#0077B5',
 			}
 		}
 	},
