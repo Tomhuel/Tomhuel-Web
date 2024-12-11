@@ -2,15 +2,15 @@
 </script>
 
 <div class="flex flex-col">
-	<div class="grid grid-cols-[1fr_2fr] gap-16 px-32 pb-32 pt-16">
-		<div class="col-span-1">
+	<div class="grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_2fr] grid-cols-1 gap-16 lg:px-24 lg:pb-32 pt-16 md:px-12">
+		<div class="col-span-1 md:mx-0 mx-8 flex justify-center">
 			<img
 				src="https://avatars.githubusercontent.com/u/90792144"
 				class="aspect-square rounded-full object-cover"
 				alt=""
 			/>
 		</div>
-		<div class="text-white">
+		<div class="text-white text-center md:text-left">
 			<h2 class="text-5xl">Orale webonaos</h2>
 		</div>
 	</div>

@@ -4,6 +4,38 @@
 	import MailIcon from '$lib/icons/MailIcon.svelte';
 	import LinkedinIcon from '$lib/icons/LinkedinIcon.svelte';
 	import GithubIcon from '$lib/icons/GithubIcon.svelte';
+	import type { Component } from 'svelte';
+
+	type Link = {
+		name: string;
+		href: string;
+		icon: Component;
+		target?: string;
+		classes: string;
+	};
+
+	const links: Link[] = [
+		{
+			name: 'Mail',
+			href: 'mailto:tomasnahuelantela@gmail.com',
+			icon: MailIcon,
+			classes: ' bg-[#fff]'
+		},
+		{
+			name: 'Github',
+			href: 'https://github.com/tomhuel',
+			icon: GithubIcon,
+			target: '_blank',
+			classes: 'bg-black'
+		},
+		{
+			name: 'Linkedin',
+			href: 'https://www.linkedin.com/in/tomhuel/',
+			icon: LinkedinIcon,
+			target: '_blank',
+			classes: 'bg-linkedin-blue'
+		}
+	];
 
 	let expanded = $state(false);
 </script>
@@ -35,26 +67,16 @@
 			</div>
 		</div>
 		<div class="hidden items-center justify-center gap-2 text-white lg:flex">
-			<a
-				href="mailto:tomasnahuelantela@gmail.com"
-				class="rounded-md bg-[#fff] px-2 py-2 text-gray-700 transition-transform duration-700 hover:scale-110"
-			>
-				<MailIcon width="24"></MailIcon>
-			</a>
-			<a
-				href="https://github.com/tomhuel"
-				target="_blank"
-				class="rounded-md bg-black px-2 py-2 transition-transform duration-700 hover:scale-110"
-			>
-				<GithubIcon fill="#fff" />
-			</a>
-			<a
-				href="https://www.linkedin.com/in/tomhuel/"
-				target="_blank"
-				class="bg-linkedin-blue rounded-md px-2 py-2 transition-transform duration-700 hover:scale-110"
-			>
-				<LinkedinIcon width="24"></LinkedinIcon>
-			</a>
+			{#each links as link}
+				{@const Icon = link.icon}
+				<a
+					href={link.href}
+					class="rounded-md bg-[#fff] px-2 py-2 text-gray-700 transition-transform duration-700 hover:scale-110 {link.classes}"
+					target={link.target}
+				>
+					<Icon width="24" />
+				</a>
+			{/each}
 		</div>
 		<div class="flex h-full items-center justify-center lg:hidden">
 			<button class="text-white" onclick={() => (expanded = !expanded)} aria-label="toggle menu">
@@ -96,27 +118,18 @@
 						onclick={() => (expanded = false)}>Experience</a
 					>
 				</div>
-				<div class="lg:hidden items-center justify-center gap-2 text-white flex my-8 flex-col">
-					<a
-						href="mailto:tomasnahuelantela@gmail.com"
-						class="rounded-md bg-[#fff] px-2 py-2 text-gray-700 transition-transform duration-700 hover:scale-110 w-1/4 flex justify-center items-center"
-					>
-						<MailIcon width="24"></MailIcon>
-					</a>
-					<a
-						href="https://github.com/tomhuel"
-						target="_blank"
-						class="rounded-md bg-black px-2 py-2 transition-transform duration-700 hover:scale-110 w-1/4 flex justify-center items-center"
-					>
-						<GithubIcon fill="#fff" />
-					</a>
-					<a
-						href="https://www.linkedin.com/in/tomhuel/"
-						target="_blank"
-						class="bg-linkedin-blue rounded-md px-2 py-2 transition-transform duration-700 hover:scale-110 w-1/4 flex justify-center items-center"
-					>
-						<LinkedinIcon width="24"></LinkedinIcon>
-					</a>
+				<div class="my-8 flex flex-col items-center justify-center gap-3 text-white lg:hidden">
+					{#each links as link}
+						{@const Icon = link.icon}
+						<a
+							href={link.href}
+							title={link.name}
+							class="flex w-full items-center justify-center rounded-md px-2 py-2 text-gray-700 transition-transform duration-700 hover:scale-[1.01] {link.classes}"
+							target={link.target}
+						>
+							<Icon width="24"></Icon>
+						</a>
+					{/each}
 				</div>
 			</div>
 		</div>
