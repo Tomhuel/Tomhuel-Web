@@ -1,5 +1,5 @@
 <script lang="ts">
-	import NeonText from './ui/Neon/NeonText.svelte';
+	import NeonText from '../ui/Neon/NeonText.svelte';
 	import MenuIcon from '$lib/icons/MenuIcon.svelte';
 	import MailIcon from '$lib/icons/MailIcon.svelte';
 	import LinkedinIcon from '$lib/icons/LinkedinIcon.svelte';
@@ -40,9 +40,9 @@
 	let expanded = $state(false);
 </script>
 
-<header class="sticky left-0 top-0 w-full px-16 py-8">
+<header class="sticky left-0 top-0 w-full md:px-16 px-8 py-8">
 	<nav
-		class="flex items-center justify-between rounded-2xl bg-zinc-800 bg-opacity-80 py-4 pe-8 ps-12"
+		class="flex items-center justify-between rounded-2xl bg-zinc-800 bg-opacity-80 py-4 lg:pe-8 pe-6 lg:ps-12 ps-8"
 	>
 		<div class="flex gap-8">
 			<a href="/" class="flex items-center justify-center">
@@ -85,7 +85,7 @@
 
 			<div
 				class={`absolute left-0 top-0 h-screen w-full bg-zinc-900 px-12 py-8 text-white transition-transform duration-300 ease-in-out ${
-					expanded ? 'translate-y-0' : 'pointer-events-none -translate-y-full opacity-0'
+					expanded ? 'translate-y-0' : 'pointer-events-none -translate-y-full'
 				}`}
 			>
 				<div class="flex flex-col items-center justify-center gap-8">

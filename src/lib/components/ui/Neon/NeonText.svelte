@@ -14,8 +14,9 @@
 		{#if char === ' '}
 			<span class="neon-space"></span>
 		{:else}
-			<span class="neon-font font-cyber text-5xl opacity-100 {textClasses}" style="animation-delay: {delay}s"
-				>{char}</span
+			<span
+				class="neon-font font-cyber text-5xl opacity-100 {textClasses}"
+				style="animation-delay: {delay}s">{char}</span
 			>
 		{/if}
 	{/each}
