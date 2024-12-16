@@ -5,6 +5,7 @@
 	import LinkedinIcon from '$lib/icons/LinkedinIcon.svelte';
 	import GithubIcon from '$lib/icons/GithubIcon.svelte';
 	import type { Component } from 'svelte';
+	import { isMenuExpanded } from '$lib/stores/expanded';
 
 	type Link = {
 		name: string;
@@ -37,7 +38,13 @@
 		}
 	];
 
-	let expanded = $state(false);
+	function expand() {
+		isMenuExpanded.set(true);
+	}
+
+	function collapse() {
+		isMenuExpanded.set(false);
+	}
 </script>
 
 <header class="sticky left-0 top-0 w-full md:px-16 px-8 py-8">
@@ -79,24 +86,24 @@
 			{/each}
 		</div>
 		<div class="flex h-full items-center justify-center lg:hidden">
-			<button class="text-white" onclick={() => (expanded = !expanded)} aria-label="toggle menu">
+			<button class="text-white" onclick={expand} aria-label="toggle menu">
 				<MenuIcon />
 			</button>
 
 			<div
 				class={`absolute left-0 top-0 h-screen w-full bg-zinc-900 px-12 py-8 text-white transition-transform duration-300 ease-in-out ${
-					expanded ? 'translate-y-0' : 'pointer-events-none -translate-y-full'
+					$isMenuExpanded ? 'translate-y-0' : 'pointer-events-none -translate-y-full'
 				}`}
 			>
 				<div class="flex flex-col items-center justify-center gap-8">
 					<div class="mb-12 flex w-full items-center justify-between gap-8">
-						<a href="/" class="flex items-center justify-center" onclick={() => (expanded = false)}>
+						<a href="/" class="flex items-center justify-center" onclick={collapse}>
 							<NeonText text="Luka" containerClasses="h-full justify-center items-center"
 							></NeonText>
 						</a>
 						<button
 							class="text-white"
-							onclick={() => (expanded = !expanded)}
+							onclick={collapse}
 							aria-label="toggle menu"
 						>
 							<MenuIcon />
@@ -105,17 +112,17 @@
 					<a
 						href="/about"
 						class="w-full font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-						onclick={() => (expanded = false)}>About</a
+						onclick={collapse}>About</a
 					>
 					<a
 						href="/projects"
 						class="w-full font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-						onclick={() => (expanded = false)}>Projects</a
+						onclick={collapse}>Projects</a
 					>
 					<a
 						href="/#experience"
 						class="w-full font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-						onclick={() => (expanded = false)}>Experience</a
+						onclick={collapse}>Experience</a
 					>
 				</div>
 				<div class="my-8 flex flex-col items-center justify-center gap-3 text-white lg:hidden">

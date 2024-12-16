@@ -12,6 +12,8 @@ export default {
 				crimson: '#bf0120',
 				lightblue: '#00ffff',
 				'linkedin-blue': '#0077B5',
+				'cool-pink': '#f0f',
+				'light-pink': '#ffb3ff'
 			}
 		}
 	},
