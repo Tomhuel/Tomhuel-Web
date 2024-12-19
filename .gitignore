@@ -13,9 +13,14 @@ Thumbs.db
 # Env
 .env
 .env.*
-!.env.example
+!.env.template
 !.env.test
 
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Package Manager Installation Files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

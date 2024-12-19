@@ -60,21 +60,32 @@
 					</div>
 				</div>
 				<h4 class="text-xl font-normal">
-					Soy un <span class="text-light-pink">desarrollador web</span> con un año de experiencia,
-					apasionado por crear, compartir y aprender de los
-					<span class="text-light-pink">desafíos</span>
-					que se me presentan. Aunque mi interés se enfoca en el
-					<span class="text-light-pink">desarrollo backend</span>, me considero una persona flexible
-					y capaz de abordar tareas en cualquier área del desarrollo.
+					I'm a <span class="text-light-pink">web developer</span> with 1 year of experience,
+					passionate about creating, share and learn from the
+					<span class="text-light-pink">challenges</span>
+					that come my way. Although my interest is focused on
+					<span class="text-light-pink">backend development</span>, I consider myself a flexible
+					person and capable of tackling tasks in any area of development.
 				</h4>
-				<h4 class="text-xl font-normal">
-					Busco formar parte de un equipo donde pueda aportar mi
-					<span class="text-light-pink">motivación</span> y
-					<span class="text-light-pink">ganas de aprender</span>, rodeándome de profesionales que me
-					ayuden a <span class="text-light-pink">crecer</span> tanto personal como profesionalmente.
-					Mi objetivo es seguir desarrollándome y contribuir al éxito de proyectos que generen un impacto
-					positivo.
-				</h4>
+				<a
+					href="/about"
+					class="focus:text-light inline-flex items-center rounded-lg border border-gray-600 px-4 py-2 text-sm font-medium text-gray-400 hover:text-light-pink hover:bg-zinc-900 focus:z-10 focus:outline-none focus:ring-1 focus:ring-lightblue transition-[color] duration-700"
+					>Discover my journey<svg
+						class="ms-2 h-3 w-3 rtl:rotate-180"
+						aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 14 10"
+					>
+						<path
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M1 5h12m0 0L9 1m4 4L9 9"
+						/>
+					</svg></a
+				>
 				<span class="text-lightblue"></span>
 			</div>
 		</div>

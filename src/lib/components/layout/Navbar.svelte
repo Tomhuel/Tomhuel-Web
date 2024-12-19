@@ -47,14 +47,15 @@
 	}
 </script>
 
-<header class="sticky left-0 top-0 w-full md:px-16 px-8 py-8">
+<header class="sticky left-0 top-0 w-full md:px-16 px-8 py-8 z-10">
 	<nav
 		class="flex items-center justify-between rounded-2xl bg-zinc-800 bg-opacity-80 py-4 lg:pe-8 pe-6 lg:ps-12 ps-8"
 	>
 		<div class="flex gap-8">
-			<a href="/" class="flex items-center justify-center">
+			<a href="/" class="items-center justify-center hidden lg:flex">
 				<NeonText text="Luka" containerClasses="h-full justify-center items-center"></NeonText>
 			</a>
+			<NeonText text="Luka" containerClasses="h-full justify-center items-center lg:hidden"></NeonText>
 			<div class="hidden items-center lg:flex">
 				<a
 					href="/about"

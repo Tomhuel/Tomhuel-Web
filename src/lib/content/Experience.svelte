@@ -18,17 +18,17 @@
 			company: 'Healthy Fun Tech S.L',
 			title: 'Web Developer',
 			description:
-				'Estamos desarrollando un producto con objetivo de fomentar la reducción de obesidad, mejora de hábitos saludables, reciclaje y muchas cosas más con nuestros juegos interactivos y educativos. Las tecnologías utilizadas en este trabajo son: Wordpress, PHP, Bootstrap 5, Webpack, JavaScript y diversas librerías.',
+				'We\'re developing a product with the aim of promoting the reduction of obesity, improving healthy habits, recycling and many other things with our interactive and educational games. I\'m the developer that did most of the app, website and deploy. The technologies used in this work are: Wordpress, PHP, MySQL, OpenLiteSpeed, Bootstrap 5, Webpack, JavaScript and various libraries.',
 			link: 'https://healthyfun.app/'
 		},
 		{
 			startDate: 'March 2023',
 			endDate: 'May 2023',
-			company: '',
+			company: 'eAgora Algoritmo del Cambio',
 			title: 'FullStack Developer',
 			description:
-				'Mi experiencia en eAgora es la culminación de mis primeros años de formación profesional. He desarrollado tareas como desarrollador FullStack, formando parte de un equipo diverso y dinámico, que trabaja para el desarrollo de herramientas innovadoras puestas al servicio de la sociedad.',
-			link: '#'
+				'My experience in eAgora is the culmination of my first years of professional training. I have developed tasks as a FullStack developer, being part of a diverse and dynamic team, working for the development of innovative tools at the service of society. The technologies used in this work are: PHP, Bootstrap 5, Laravel, Livewire & MySQL.',
+			link: 'https://eagora.app'
 		},
 		{
 			startDate: 'October 2017',
@@ -36,7 +36,7 @@
 			company: 'Entrenando Cerebritos',
 			title: 'Volunteer | Teams Coordinator',
 			description:
-				'Colaborando con la asociación de inteligencias múltiples Cerebritos desde los 14 años. He hecho de monitor en múltiples actividades con niños y jóvenes relacionados con las inteligencias y tecnologías cómo la robótica. Co-diseño, organización, ejecución de talleres y formación son solo algunas de mis funciones en esta asociación.'
+				'Colaborating with the association of multiple intelligences Cerebritos since I was 14 years old. I have been a monitor in multiple activities with children and young people related to intelligences and technologies such as robotics. Co-design, organization, execution of workshops and training are just some of my functions in this association.',
 		}
 	];
 </script>
@@ -65,8 +65,9 @@
 				{#if experience.link}
 					<a
 						href={experience.link}
-						class="focus:text-light inline-flex items-center rounded-lg border border-gray-600 bg-gray-800 px-4 py-2 text-sm font-medium text-gray-400 hover:bg-gray-700 hover:text-lightblue focus:z-10 focus:outline-none focus:ring-1 focus:ring-lightblue"
-						>See more...<svg
+						target="_blank"
+						class="focus:text-light inline-flex items-center rounded-lg border border-gray-600  px-4 py-2 text-sm font-medium text-gray-400 hover:bg-zinc-900 hover:text-lightblue focus:z-10 focus:outline-none focus:ring-1 focus:ring-lightblue transition-[color] duration-700"
+						>See more<svg
 							class="ms-2 h-3 w-3 rtl:rotate-180"
 							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
