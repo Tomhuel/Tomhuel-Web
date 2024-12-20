@@ -1,9 +1,6 @@
 <script lang="ts">
 	import NeonText from '../ui/Neon/NeonText.svelte';
-	import MenuIcon from '$lib/icons/MenuIcon.svelte';
-	import MailIcon from '$lib/icons/MailIcon.svelte';
-	import LinkedinIcon from '$lib/icons/LinkedinIcon.svelte';
-	import GithubIcon from '$lib/icons/GithubIcon.svelte';
+	import {MenuIcon, MailIcon, GithubIcon, LinkedinIcon} from '$lib/icons';
 	import type { Component } from 'svelte';
 	import { isMenuExpanded } from '$lib/stores/expanded';
 
@@ -20,21 +17,21 @@
 			name: 'Mail',
 			href: 'mailto:tomasnahuelantela@gmail.com',
 			icon: MailIcon,
-			classes: ' bg-[#fff]'
+			classes: 'bg-transparent'
 		},
 		{
 			name: 'Github',
 			href: 'https://github.com/tomhuel',
 			icon: GithubIcon,
 			target: '_blank',
-			classes: 'bg-black'
+			classes: 'bg-transparent'
 		},
 		{
 			name: 'Linkedin',
 			href: 'https://www.linkedin.com/in/tomhuel/',
 			icon: LinkedinIcon,
 			target: '_blank',
-			classes: 'bg-linkedin-blue'
+			classes: 'bg-transparent'
 		}
 	];
 
@@ -126,16 +123,16 @@
 						onclick={collapse}>Experience</a
 					>
 				</div>
-				<div class="my-8 flex flex-col items-center justify-center gap-3 text-white lg:hidden">
+				<div class="my-8 flex items-center justify-center gap-8 text-white lg:hidden">
 					{#each links as link}
 						{@const Icon = link.icon}
 						<a
 							href={link.href}
 							title={link.name}
-							class="flex w-full items-center justify-center rounded-md px-2 py-2 text-gray-700 transition-transform duration-700 hover:scale-[1.01] {link.classes}"
+							class="flex items-center justify-center rounded-md px-2 py-2 text-gray-700 transition-transform duration-700 hover:scale-[1.01] {link.classes}"
 							target={link.target}
 						>
-							<Icon width="24"></Icon>
+							<Icon width="32"></Icon>
 						</a>
 					{/each}
 				</div>

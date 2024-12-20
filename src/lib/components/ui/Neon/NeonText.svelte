@@ -7,16 +7,17 @@
 		char,
 		delay: index * 0.2
 	}));
+
+	let resolvedTextClasses = $derived(textClasses || 'text-5xl opacity-100');
 </script>
 
-<div class="neon-container flex {containerClasses}">
+<div class="neon-container flex flex-wrap {containerClasses}">
 	{#each letters as { char, delay }}
 		{#if char === ' '}
 			<span class="neon-space"></span>
 		{:else}
-			<span
-				class="neon-font font-cyber text-5xl opacity-100 {textClasses}"
-				style="animation-delay: {delay}s">{char}</span
+			<span class="neon-font font-cyber {resolvedTextClasses}" style="animation-delay: {delay}s"
+				>{char}</span
 			>
 		{/if}
 	{/each}

@@ -59,7 +59,7 @@
 				<h3 class="text-lg font-semibold text-gray-900 dark:text-white">
 					{experience.title}
 				</h3>
-				<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+				<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">
 					{experience.description}
 				</p>
 				{#if experience.link}
