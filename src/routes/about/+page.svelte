@@ -149,8 +149,7 @@ Spanish
 </script>
 
 <svelte:head>
-	<title>About - Tomhuel</title>
-	<meta name="description" content="About this app" />
+	<title>Tomhuel - About</title>
 </svelte:head>
 
 <Section classname="pt-6 lg:px-48">
