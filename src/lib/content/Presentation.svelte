@@ -5,7 +5,7 @@
 	import NeonText from '$lib/components/ui/Neon/NeonText.svelte';
 	import StatusBubble from '$lib/components/ui/StatusBubble/StatusBubble.svelte';
 
-	const workAvaiable = true;
+	const workAvaiable = false;
 	let currentTime = getCurrentDatetime();
 	let interval: number;
 
@@ -34,7 +34,7 @@
 			</div>
 			<div class="flex flex-col items-start justify-start gap-4 text-left text-white">
 				<div class="flex w-full flex-col gap-2 font-cyber">
-					<NeonText text="LukaLaKuka" textClasses="text-4xl" containerClasses="-z-10"></NeonText>
+					<NeonText text="Tomhuel" textClasses="text-4xl" containerClasses="-z-10"></NeonText>
 					<div class="flex gap-4 pb-4 pt-2 flex-wrap">
 						<StatusBubble
 							text={currentTime}

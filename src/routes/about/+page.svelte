@@ -15,7 +15,7 @@ Spanish
 		<NeonText text="My Journey" textClasses="text-2xl"></NeonText>
 		<br />
 		<p class="mb-16">
-			¡Hola! Soy Luka, espero que te esté gustando mi sitio web 😉. <br /> En esta sección
+			¡Hola! Soy Tomhuel, espero que te esté gustando mi sitio web 😉. <br /> En esta sección
 			encontrarás un poco más sobre <span class="text-light-pink">mi camino</span> personal y profesional,
 			los proyectos, etapas y logros que me han marcado para que te puedas ubicar más fácilmente con
 			mi perfil. ¡Espero que disfrutes leyéndolo!
@@ -41,22 +41,6 @@ Spanish
 					target="_blank"
 					class="text-lightblue hover:underline">inteligencias múltiples</a
 				>.
-			</p>
-		</div>
-
-		<div class="mb-12">
-			<NeonText text="My name" textClasses="text-2xl"></NeonText>
-
-			<p>
-				Mi nombre real es <span class="text-light-pink">Tomás Nahuel Antela Rizzo</span>, pero el
-				nombre de <span class="text-lightblue">"Luka"</span> viene de una divertida anéctoda. La
-				primera vez que conocí a uno de mis actuales mejores amigos, nos presentamos con nuestros
-				nombres correspondientes. Cuando cada uno se iba a su casa, este nuevo conocido procedió a
-				llamarme Luka a pesar de haber estado pasando varias horas compartiendo risas. Resultó ser
-				un nombre que me gustó mucho y a partir de entonces ha sido el apodo con el que mucha gente
-				de mi círculo cercano me llama. Incluso mi apodo en los videojuegos es
-				<span class="text-light-pink">LukaLaKuka</span>. Es por eso que en muchos sitios me llamo
-				Luka, a pesar de que mi nombre formal sea Tomás.
 			</p>
 		</div>
 
@@ -165,7 +149,7 @@ Spanish
 </script>
 
 <svelte:head>
-	<title>About - LukaLaKuka</title>
+	<title>About - Tomhuel</title>
 	<meta name="description" content="About this app" />
 </svelte:head>
 
@@ -174,7 +158,7 @@ Spanish
 		<NeonText text="My Journey" textClasses="text-2xl"></NeonText>
 		<br />
 		<p class="mb-16">
-			Hi there! I'm Luka, I hope you're enjoying my website 😉. <br /> In this section,
+			Hi there! I'm Tomás, I hope youcan enjoy my website 😉. <br /> In this section,
 			you'll find a little more about <span class="text-light-pink">my personal and professional journey</span>,
 			the projects, milestones, and achievements that have shaped me, so you can get a better sense of who I am. I hope you enjoy reading it!
 		</p>
@@ -195,14 +179,6 @@ Spanish
 					target="_blank"
 					class="text-lightblue hover:underline">multiple intelligences</a
 				>.
-			</p>
-		</div>
-
-		<div class="mb-12">
-			<NeonText text="My name" textClasses="text-2xl"></NeonText>
-
-			<p>
-				My real name is <span class="text-light-pink">Tomás Nahuel Antela Rizzo</span>, but the name <span class="text-lightblue">"Luka"</span> comes from a funny anecdote. The first time I met one of my current best friends, we introduced ourselves with our proper names. However, when we went home, this new acquaintance kept calling me Luka despite spending hours together laughing and talking. It turned out to be a name I really liked, and since then, it has become the nickname that many people in my close circle call me. Even my gaming nickname is <span class="text-light-pink">LukaLaKuka</span>. That’s why I often go by Luka, even though my formal name is Tomás.
 			</p>
 		</div>
 

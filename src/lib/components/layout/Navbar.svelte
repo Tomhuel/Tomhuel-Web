@@ -50,9 +50,9 @@
 	>
 		<div class="flex gap-8">
 			<a href="/" class="items-center justify-center hidden lg:flex">
-				<NeonText text="Luka" containerClasses="h-full justify-center items-center"></NeonText>
+				<NeonText text="Tomhuel" containerClasses="h-full justify-center items-center" textClasses="text-4xl"></NeonText>
 			</a>
-			<NeonText text="Luka" containerClasses="h-full justify-center items-center lg:hidden"></NeonText>
+			<NeonText text="Tomhuel" containerClasses="h-full justify-center items-center lg:hidden" textClasses="text-3xl"></NeonText>
 			<div class="hidden items-center lg:flex">
 				<a
 					href="/about"
@@ -96,8 +96,8 @@
 				<div class="flex flex-col items-center justify-center gap-8">
 					<div class="mb-12 flex w-full items-center justify-between gap-8">
 						<a href="/" class="flex items-center justify-center" onclick={collapse}>
-							<NeonText text="Luka" containerClasses="h-full justify-center items-center"
-							></NeonText>
+							<NeonText text="Tomhuel" containerClasses="h-full justify-center items-center"
+							 textClasses="text-3xl"></NeonText>
 						</a>
 						<button
 							class="text-white"

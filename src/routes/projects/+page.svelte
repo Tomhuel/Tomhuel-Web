@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Projects - LukaLaKuka</title>
+	<title>Projects - Tomhuel</title>
 	<meta name="description" content="Projects I've worked on.">
 </svelte:head>
 
