@@ -44,14 +44,14 @@
 						/>
 						{#if workAvaiable}
 							<StatusBubble
-								text="Work Status: Avaiable"
+								text="Work Status: Available"
 								bgColor="bg-green-500"
 								textColor="text-green-100"
 								circleColor="#0f0"
 							/>
 						{:else}
 							<StatusBubble
-								text="Work Status: Unavaiable"
+								text="Work Status: Unavailable"
 								bgColor="bg-red-500"
 								textColor="text-red-100"
 								circleColor="#f00"

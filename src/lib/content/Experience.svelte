@@ -59,6 +59,7 @@
 				<h3 class="text-lg font-semibold text-gray-900 dark:text-white">
 					{experience.title}
 				</h3>
+				<h4 class="text-gray-200 mb-2">{experience.company}</h4>
 				<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">
 					{experience.description}
 				</p>
