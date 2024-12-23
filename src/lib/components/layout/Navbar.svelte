@@ -1,8 +1,9 @@
 <script lang="ts">
-	import NeonText from '../ui/Neon/NeonText.svelte';
-	import {MenuIcon, MailIcon, GithubIcon, LinkedinIcon} from '$lib/icons';
+	import { MenuIcon, MailIcon, GithubIcon, LinkedinIcon, LogoIcon } from '$lib/icons';
 	import type { Component } from 'svelte';
 	import { isMenuExpanded } from '$lib/stores/expanded';
+
+	const logoWidth = '36';
 
 	type Link = {
 		name: string;
@@ -44,31 +45,33 @@
 	}
 </script>
 
-<header class="sticky left-0 top-0 w-full md:px-16 px-8 py-8 z-10">
+<header class="sticky left-0 top-0 z-10 w-full px-8 py-8 md:px-16">
 	<nav
-		class="flex items-center justify-between rounded-2xl bg-zinc-800 bg-opacity-80 py-4 lg:pe-8 pe-6 lg:ps-12 ps-8"
+		class="flex items-center justify-between rounded-2xl bg-zinc-800 bg-opacity-80 pe-6 ps-8 lg:pe-8 lg:ps-12"
 	>
-		<div class="flex gap-8">
-			<a href="/" class="items-center justify-center hidden lg:flex">
-				<NeonText text="Tomhuel" containerClasses="h-full justify-center items-center" textClasses="text-4xl"></NeonText>
+		<div class="flex gap-8 items-center">
+			<a href="/" class="hidden items-center justify-center lg:flex">
+				<LogoIcon width={logoWidth} className="hover:scale-110 transition-transform duration-[600ms]" />
 			</a>
-			<NeonText text="Tomhuel" containerClasses="h-full justify-center items-center lg:hidden" textClasses="text-3xl"></NeonText>
-			<div class="hidden items-center lg:flex">
-				<a
-					href="/about"
-					class="px-4 font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-					>About</a
-				>
-				<a
-					href="/projects"
-					class="px-4 font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-					>Projects</a
-				>
-				<a
-					href="/#experience"
-					class="px-4 font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-					>Experience</a
-				>
+			<div class="flex gap-8 py-4">
+				<LogoIcon className="h-full justify-center items-center lg:hidden hover:scale-110 transition-transform duration-[600ms]" width={logoWidth}/>
+				<div class="hidden items-center lg:flex">
+					<a
+						href="/about"
+						class="px-4 font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
+						>About</a
+					>
+					<a
+						href="/projects"
+						class="px-4 font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
+						>Projects</a
+					>
+					<a
+						href="/#experience"
+						class="px-4 font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
+						>Experience</a
+					>
+				</div>
 			</div>
 		</div>
 		<div class="hidden items-center justify-center gap-2 text-white lg:flex">
@@ -89,21 +92,16 @@
 			</button>
 
 			<div
-				class={`absolute left-0 top-0 h-screen w-full bg-zinc-900 px-12 py-8 text-white transition-transform duration-300 ease-in-out ${
+				class={`absolute left-0 top-0 h-screen w-full overflow-y-scroll bg-zinc-900 px-12 py-8 text-white transition-transform duration-300 ease-in-out ${
 					$isMenuExpanded ? 'translate-y-0' : 'pointer-events-none -translate-y-full'
 				}`}
 			>
 				<div class="flex flex-col items-center justify-center gap-8">
 					<div class="mb-12 flex w-full items-center justify-between gap-8">
 						<a href="/" class="flex items-center justify-center" onclick={collapse}>
-							<NeonText text="Tomhuel" containerClasses="h-full justify-center items-center"
-							 textClasses="text-3xl"></NeonText>
+							<LogoIcon width={logoWidth} className="hover:scale-110 transition-transform duration-[600ms]" />
 						</a>
-						<button
-							class="text-white"
-							onclick={collapse}
-							aria-label="toggle menu"
-						>
+						<button class="text-white" onclick={collapse} aria-label="toggle menu">
 							<MenuIcon />
 						</button>
 					</div>

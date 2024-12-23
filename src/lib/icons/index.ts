@@ -21,28 +21,7 @@ import JwtIcon from "./JwtIcon.svelte";
 import SqliteIcon from "./SqliteIcon.svelte";
 import PrismaIcon from "./PrismaIcon.svelte";
 import DownloadIcon from "./DownloadIcon.svelte";
-
-/*
-tech
-
-X HTML
-X CSS
-X TS
-X Svelte
-X NODEJS
-X JS
-X tailwindcss
-X electron
-X bootstrap
-X php
-X laravel
-X mysql
-X react
-X next
-X jwt
-X sqlite
-prisma
-*/
+import LogoIcon from "./LogoIcon.svelte";
 
 export {
     // Normal Icons
@@ -52,6 +31,7 @@ export {
     MailIcon,
     MenuIcon,
     DownloadIcon,
+    LogoIcon,
 
     // Tech Icons
     HtmlIcon,
