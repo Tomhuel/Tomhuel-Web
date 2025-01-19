@@ -5,7 +5,7 @@
 	import NeonText from '$lib/components/ui/Neon/NeonText.svelte';
 	import StatusBubble from '$lib/components/ui/StatusBubble/StatusBubble.svelte';
 
-	const workAvaiable = false;
+	const workAvaiable = true;
 	let currentTime = getCurrentDatetime();
 	let interval: number;
 
