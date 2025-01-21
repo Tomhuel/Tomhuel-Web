@@ -14,7 +14,7 @@
 	const experiences: IExperience[] = [
 		{
 			startDate: 'May 2024',
-			endDate: 'Currently',
+			endDate: 'February 2025',
 			company: 'Healthy Fun Tech S.L',
 			title: 'Web Developer',
 			description:

@@ -203,3 +203,9 @@ html {
     transform: translateY(0px) translateX(250px);
   }
 }
+
+@media (max-width: 768px) {
+  .grid>.preview-block:nth-child(n + 4) {
+    display: none;
+  }
+}

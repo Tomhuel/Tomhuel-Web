@@ -1,6 +1,7 @@
 <script lang="ts">
 	// TODO: Drop this GithubIcon, just to fill the space
 	import Section from '$lib/components/layout/Section.svelte';
+	import ProjectCard from '$lib/components/ui/ProjectCard/ProjectCard.svelte';
 	import {
 		CssIcon,
 		HtmlIcon,
@@ -22,28 +23,9 @@
 		PrismaIcon,
 		DownloadIcon
 	} from '$lib/icons';
-	import type { Component } from 'svelte';
+	import type { IProject } from '$lib/types/Project';
 
 	let { preview = true } = $props();
-
-	interface IProject {
-		title: string;
-		thumbnail: string;
-		technologies: ITechnology[];
-		description: string;
-		links: ILink[];
-	}
-
-	interface ITechnology {
-		name: string;
-		icon: Component;
-	}
-
-	interface ILink {
-		name: string;
-		url: string;
-		icon: Component;
-	}
 
 	const projects: IProject[] = [
 		{
@@ -145,38 +127,7 @@
 	<span class="font-cyber text-3xl">Projects</span>
 	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 2xl:grid-cols-3">
 		{#each preview ? projects.slice(0, 4) : projects as project}
-			<div
-				class="mt-8 flex flex-col items-start justify-start rounded-xl border border-white border-opacity-40 bg-zinc-950 p-4 md:p-6 {preview
-					? 'preview-block'
-					: ''}"
-			>
-				<div class="w-100 flex w-full items-center justify-center">
-					<img class="w-full rounded-lg" src={project.thumbnail} alt={project.title} />
-				</div>
-				<div class="flex h-full w-full flex-col items-start justify-between">
-					<h3 class="mt-4 text-lg font-semibold">{project.title}</h3>
-					<p class="mt-2 text-pretty text-sm font-normal text-gray-500">{project.description}</p>
-					<div class="flex h-full w-full flex-col justify-between">
-						<div class="mt-4 flex w-full flex-wrap items-center justify-center gap-4">
-							{#each project.technologies as technology}
-								{@const Technology = technology.icon}
-								<Technology width="36" />
-							{/each}
-						</div>
-						<div class="mt-4 flex w-full flex-wrap items-center justify-center gap-4 pt-4">
-							{#each project.links as link}
-								{@const Link = link.icon}
-								<a
-									href={link.url}
-									target="_blank"
-									class="focus:text-light inline-flex items-center gap-2 rounded-lg border border-gray-600 px-4 py-2 text-sm font-medium text-gray-400 transition-[color] duration-700 hover:bg-zinc-900 hover:text-lightblue focus:z-10 focus:outline-none focus:ring-1 focus:ring-lightblue"
-									><Link />{link.name}</a
-								>
-							{/each}
-						</div>
-					</div>
-				</div>
-			</div>
+			<ProjectCard {preview} {project}></ProjectCard>
 		{/each}
 	</div>
 	{#if preview}
@@ -188,11 +139,3 @@
 		</div>
 	{/if}
 </Section>
-
-<style>
-	@media (max-width: 768px) {
-		.grid > .preview-block:nth-child(n + 4) {
-			display: none;
-		}
-	}
-</style>
