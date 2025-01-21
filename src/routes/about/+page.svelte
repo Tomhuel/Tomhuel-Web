@@ -157,7 +157,7 @@ Spanish
 		<NeonText text="My Journey" textClasses="text-2xl"></NeonText>
 		<br />
 		<p class="mb-16">
-			Hi there! I'm Tomás, I hope youcan enjoy my website 😉. <br /> In this section,
+			Hi there! I'm Tomás, I hope you can enjoy my website 😉. <br /> In this section,
 			you'll find a little more about <span class="text-light-pink">my personal and professional journey</span>,
 			the projects, milestones, and achievements that have shaped me, so you can get a better sense of who I am. I hope you enjoy reading it!
 		</p>
