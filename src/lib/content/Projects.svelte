@@ -92,7 +92,13 @@
 				{ name: 'MySQL', icon: MysqlIcon },
 				{ name: 'JWT', icon: JwtIcon }
 			],
-			links: []
+			links: [
+				{
+					name: 'Github',
+					url: 'https://github.com/Tomhuel/Cerebritos',
+					icon: GithubIcon
+				}
+			]
 		},
 		{
 			title: 'TaoBot',
@@ -107,7 +113,7 @@
 			links: [
 				{
 					name: 'Github',
-					url: 'https://github.com/Tomhuel/TaoModManager/releases/latest',
+					url: 'https://github.com/Tomhuel/TaoBot',
 					icon: GithubIcon
 				}
 			]
