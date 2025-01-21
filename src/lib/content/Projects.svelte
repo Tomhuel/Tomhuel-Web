@@ -1,7 +1,27 @@
 <script lang="ts">
 	// TODO: Drop this GithubIcon, just to fill the space
 	import Section from '$lib/components/layout/Section.svelte';
-	import { CssIcon, HtmlIcon, NodeJsIcon, SvelteIcon, TsIcon, GithubIcon, TailwindCss, ElectronIcon, BootstrapIcon, PhpIcon, LaravelIcon, MysqlIcon, JsIcon, ReactIcon, NextJsIcon, JwtIcon, SqliteIcon, PrismaIcon, DownloadIcon } from '$lib/icons';
+	import {
+		CssIcon,
+		HtmlIcon,
+		NodeJsIcon,
+		SvelteIcon,
+		TsIcon,
+		GithubIcon,
+		TailwindCss,
+		ElectronIcon,
+		BootstrapIcon,
+		PhpIcon,
+		LaravelIcon,
+		MysqlIcon,
+		JsIcon,
+		ReactIcon,
+		NextJsIcon,
+		JwtIcon,
+		SqliteIcon,
+		PrismaIcon,
+		DownloadIcon
+	} from '$lib/icons';
 	import type { Component } from 'svelte';
 
 	let { preview = true } = $props();
@@ -65,7 +85,7 @@
 				{ name: 'Bootstrap 5', icon: BootstrapIcon },
 				{ name: 'PHP', icon: PhpIcon },
 				{ name: 'Laravel', icon: LaravelIcon },
-				{ name: 'MySQL', icon: MysqlIcon },
+				{ name: 'MySQL', icon: MysqlIcon }
 			],
 			links: [
 				{
@@ -119,30 +139,28 @@
 			]
 		}
 	];
-
-	const getProjects = (): IProject[] => {
-		return preview ? projects.slice(0, 3) : projects;
-	};
 </script>
 
 <Section classname="pt-12 md:px-12 2xl:px-60 pb-24 text-white">
 	<span class="font-cyber text-3xl">Projects</span>
-	<div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8">
-		{#each getProjects() as project}
+	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 2xl:grid-cols-3">
+		{#each preview ? projects.slice(0, 4) : projects as project}
 			<div
-				class="mt-8 flex flex-col items-start justify-start rounded-xl border border-white border-opacity-40 bg-zinc-950 p-4 md:p-6"
+				class="mt-8 flex flex-col items-start justify-start rounded-xl border border-white border-opacity-40 bg-zinc-950 p-4 md:p-6 {preview
+					? 'preview-block'
+					: ''}"
 			>
 				<div class="w-100 flex w-full items-center justify-center">
 					<img class="w-full rounded-lg" src={project.thumbnail} alt={project.title} />
 				</div>
-				<div class="flex flex-col items-start justify-between w-full h-full">
+				<div class="flex h-full w-full flex-col items-start justify-between">
 					<h3 class="mt-4 text-lg font-semibold">{project.title}</h3>
 					<p class="mt-2 text-pretty text-sm font-normal text-gray-500">{project.description}</p>
-					<div class="flex flex-col justify-between w-full h-full">
+					<div class="flex h-full w-full flex-col justify-between">
 						<div class="mt-4 flex w-full flex-wrap items-center justify-center gap-4">
 							{#each project.technologies as technology}
 								{@const Technology = technology.icon}
-								<Technology width='36' />
+								<Technology width="36" />
 							{/each}
 						</div>
 						<div class="mt-4 flex w-full flex-wrap items-center justify-center gap-4 pt-4">
@@ -163,9 +181,18 @@
 	</div>
 	{#if preview}
 		<div class="mt-8 flex justify-center">
-			<a class="text-sm font-normal text-lightblue hover:scale-110 transition-transform duration-[600ms]" href="/projects"
-				>View all projects</a
+			<a
+				class="text-sm font-normal text-lightblue transition-transform duration-[600ms] hover:scale-110"
+				href="/projects">View all projects</a
 			>
 		</div>
 	{/if}
 </Section>
+
+<style>
+	@media (max-width: 768px) {
+		.grid > .preview-block:nth-child(n + 4) {
+			display: none;
+		}
+	}
+</style>
