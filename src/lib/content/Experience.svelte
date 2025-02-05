@@ -18,7 +18,7 @@
 			company: 'Healthy Fun Tech S.L',
 			title: 'Web Developer',
 			description:
-				'We\'re developing a product with the aim of promoting the reduction of obesity, improving healthy habits, recycling and many other things with our interactive and educational games. I\'m the developer that did most of the app, website and deploy. The technologies used in this work are: Wordpress, PHP, MySQL, OpenLiteSpeed, Bootstrap 5, Webpack, JavaScript and various libraries.',
+				'We were developing a product with the aim of promoting the reduction of obesity, improving healthy habits, recycling and many other things with our interactive and educational games. I\'m the developer that did most of the app, website and deploy. The technologies used in this work are: Wordpress, PHP, MySQL, OpenLiteSpeed, Bootstrap 5, Webpack, JavaScript and various libraries.',
 			link: 'https://healthyfun.app/'
 		},
 		{
