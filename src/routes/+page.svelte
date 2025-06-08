@@ -5,10 +5,10 @@
 </script>
 
 <svelte:head>
-	<title>Tomhuel - Web Developer</title>
+	<title>Tomhuel - Software Developer</title>
 	<meta
 		name="description"
-		content="I'm a web developer with 1 year of experience, passionate about creating, share and learn from the challenges that come my way. Although my interest is focused on backend development, I consider myself a flexible person and capable of tackling tasks in any area of development."
+		content="I'm a software developer with 1 year of experience, passionate about creating, share and learn from the challenges that come my way. Although my interest is focused on backend development, I consider myself a flexible person and capable of tackling tasks in any area of development."
 	/>
 </svelte:head>
 
