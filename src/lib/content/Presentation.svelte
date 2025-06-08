@@ -60,7 +60,7 @@
 					</div>
 				</div>
 				<h4 class="text-xl font-normal">
-					I'm a <span class="text-light-pink">web developer</span> with 1 year of experience,
+					I'm a <span class="text-light-pink">software developer</span> with 1 year of experience,
 					passionate about creating, share and learn from the
 					<span class="text-light-pink">challenges</span>
 					that come my way. Although my interest is focused on
