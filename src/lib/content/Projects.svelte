@@ -21,7 +21,13 @@
 		JwtIcon,
 		SqliteIcon,
 		PrismaIcon,
-		DownloadIcon
+		DownloadIcon,
+		JavaIcon,
+		SpringIcon,
+		PostmanIcon,
+		PostgreSqlIcon,
+		SwaggerIcon,
+		DockerIcon
 	} from '$lib/icons';
 	import type { IProject } from '$lib/types/Project';
 
@@ -98,6 +104,27 @@
 				{
 					name: 'Github',
 					url: 'https://github.com/Tomhuel/Cerebritos',
+					icon: GithubIcon
+				}
+			]
+		},
+		{
+			title: "School's API",
+			description:
+				'API REST with good practices to learn Spring Boot, Spring Data, Spring Security and Postman Integration Tests.',
+			thumbnail: '/thumbnails/schoolsapi.png',
+			technologies: [
+				{ name: 'Java', icon: JavaIcon },
+				{ name: 'Spring', icon: SpringIcon },
+				{ name: 'PostgreSQL', icon: PostgreSqlIcon },
+				{ name: 'Docker', icon: DockerIcon },
+				{ name: 'Postman', icon: PostmanIcon },
+				{ name: 'Swagger', icon: SwaggerIcon }
+			],
+			links: [
+				{
+					name: 'Github',
+					url: 'https://github.com/Tomhuel/Schools-API',
 					icon: GithubIcon
 				}
 			]

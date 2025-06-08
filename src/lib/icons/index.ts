@@ -22,6 +22,12 @@ import SqliteIcon from "./SqliteIcon.svelte";
 import PrismaIcon from "./PrismaIcon.svelte";
 import DownloadIcon from "./DownloadIcon.svelte";
 import LogoIcon from "./LogoIcon.svelte";
+import JavaIcon from "./JavaIcon.svelte";
+import SpringIcon from "./SpringIcon.svelte";
+import PostmanIcon from "./PostmanIcon.svelte";
+import DockerIcon from "./DockerIcon.svelte";
+import PostgreSqlIcon from "./PostgreSQLIcon.svelte";
+import SwaggerIcon from "./SwaggerIcon.svelte";
 
 export {
     // Normal Icons
@@ -50,5 +56,11 @@ export {
     NextJsIcon,
     JwtIcon,
     SqliteIcon,
-    PrismaIcon
+    PrismaIcon,
+    JavaIcon,
+    SpringIcon,
+    PostmanIcon,
+    DockerIcon,
+    PostgreSqlIcon,
+    SwaggerIcon,
 }
