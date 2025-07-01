@@ -24,7 +24,8 @@ import {
 		PostmanIcon,
 		PostgreSqlIcon,
 		SwaggerIcon,
-		DockerIcon
+		DockerIcon,
+        OpenBookIcon
 	} from '$lib/icons';
 
 
@@ -53,6 +54,11 @@ export const PROJECTS: IProject[] = [
                 name: 'Download',
                 url: 'https://github.com/Tomhuel/TaoModManager/releases/latest',
                 icon: DownloadIcon
+            },
+            {
+                name: 'Documentation',
+                url: 'https://deepwiki.com/Tomhuel/TaoModManager',
+                icon: OpenBookIcon
             }
         ]
     },
@@ -75,6 +81,11 @@ export const PROJECTS: IProject[] = [
                 name: 'Github',
                 url: 'https://github.com/Tomhuel/GrooveBox',
                 icon: GithubIcon
+            },
+            {
+                name: 'Documentation',
+                url: 'https://deepwiki.com/Tomhuel/GrooveBox',
+                icon: OpenBookIcon
             }
         ]
     },
@@ -100,6 +111,11 @@ export const PROJECTS: IProject[] = [
                 name: 'Github',
                 url: 'https://github.com/Tomhuel/Cerebritos',
                 icon: GithubIcon
+            },
+            {
+                name: 'Documentation',
+                url: 'https://deepwiki.com/Tomhuel/Cerebritos',
+                icon: OpenBookIcon
             }
         ]
     },
@@ -121,6 +137,11 @@ export const PROJECTS: IProject[] = [
                 name: 'Github',
                 url: 'https://github.com/Tomhuel/Schools-API',
                 icon: GithubIcon
+            },
+            {
+                name: 'Documentation',
+                url: 'https://deepwiki.com/Tomhuel/Schools-API',
+                icon: OpenBookIcon
             }
         ]
     },
@@ -139,6 +160,11 @@ export const PROJECTS: IProject[] = [
                 name: 'Github',
                 url: 'https://github.com/Tomhuel/TaoBot',
                 icon: GithubIcon
+            },
+            {
+                name: 'Documentation',
+                url: 'https://deepwiki.com/Tomhuel/TaoBot',
+                icon: OpenBookIcon
             }
         ]
     }

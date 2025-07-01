@@ -11,8 +11,8 @@
 	<div class="w-100 flex w-full items-center justify-center">
 		<img class="w-full rounded-lg" src={project.thumbnail} alt={project.title} />
 	</div>
-	<div class="flex h-full w-full flex-col items-start justify-between">
-		<h3 class="mt-4 text-lg font-semibold">{project.title}</h3>
+	<div class="flex h-full w-full flex-col items-start justify-between mt-4">
+		<h3 class="text-lg font-semibold">{project.title}</h3>
 		<p class="mt-2 text-pretty text-sm font-normal text-gray-500">{project.description}</p>
 		<div class="flex h-full w-full flex-col justify-between">
 			<div class="mt-4 flex w-full flex-wrap items-center justify-center gap-4">
@@ -21,7 +21,7 @@
 					<Technology width="36" />
 				{/each}
 			</div>
-			<div class="mt-4 flex w-full flex-wrap items-center justify-center gap-4 pt-4">
+			<div class="mt-8 flex w-full flex-wrap items-center justify-center gap-4">
 				{#each project.links as link}
 					{@const Link = link.icon}
 					<a

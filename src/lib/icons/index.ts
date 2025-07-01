@@ -28,6 +28,7 @@ import PostmanIcon from "./PostmanIcon.svelte";
 import DockerIcon from "./DockerIcon.svelte";
 import PostgreSqlIcon from "./PostgreSQLIcon.svelte";
 import SwaggerIcon from "./SwaggerIcon.svelte";
+import OpenBookIcon from "./OpenBookIcon.svelte";
 
 export {
     // Normal Icons
@@ -63,4 +64,5 @@ export {
     DockerIcon,
     PostgreSqlIcon,
     SwaggerIcon,
+    OpenBookIcon
 }
