@@ -1,32 +1,35 @@
 import type { IProject } from "$lib/types/Project";
 import {
-		CssIcon,
-		HtmlIcon,
-		NodeJsIcon,
-		SvelteIcon,
-		TsIcon,
-		GithubIcon,
-		TailwindCss,
-		ElectronIcon,
-		BootstrapIcon,
-		PhpIcon,
-		LaravelIcon,
-		MysqlIcon,
-		JsIcon,
-		ReactIcon,
-		NextJsIcon,
-		JwtIcon,
-		SqliteIcon,
-		PrismaIcon,
-		DownloadIcon,
-		JavaIcon,
-		SpringIcon,
-		PostmanIcon,
-		PostgreSqlIcon,
-		SwaggerIcon,
-		DockerIcon,
-        OpenBookIcon
-	} from '$lib/icons';
+    CssIcon,
+    HtmlIcon,
+    NodeJsIcon,
+    SvelteIcon,
+    TsIcon,
+    GithubIcon,
+    TailwindCss,
+    ElectronIcon,
+    BootstrapIcon,
+    PhpIcon,
+    LaravelIcon,
+    MysqlIcon,
+    JsIcon,
+    ReactIcon,
+    NextJsIcon,
+    JwtIcon,
+    SqliteIcon,
+    PrismaIcon,
+    DownloadIcon,
+    JavaIcon,
+    SpringIcon,
+    PostmanIcon,
+    PostgreSqlIcon,
+    SwaggerIcon,
+    DockerIcon,
+    OpenBookIcon,
+    BitsUiIcon,
+    VercelIcon,
+    GlobeIcon
+} from '$lib/icons';
 
 
 export const PROJECTS: IProject[] = [
@@ -116,6 +119,29 @@ export const PROJECTS: IProject[] = [
                 name: 'Documentation',
                 url: 'https://deepwiki.com/Tomhuel/Cerebritos',
                 icon: OpenBookIcon
+            }
+        ]
+    },
+    {
+        title: 'Simplifico tu trabajo',
+        description:
+            "Minimalist website designed for a client to showcase their services and convert visitors into customers.",
+        thumbnail: '/thumbnails/simplifico-tu-trabajo.png',
+        technologies: [
+            { name: 'HTML', icon: HtmlIcon },
+            { name: 'CSS', icon: CssIcon },
+            { name: 'TypeScript', icon: TsIcon },
+            { name: 'SvelteKit', icon: SvelteIcon },
+            { name: 'NodeJS', icon: NodeJsIcon },
+            { name: 'TailwindCSS', icon: TailwindCss },
+            { name: 'BitsUI', icon: BitsUiIcon },
+            { name: 'Vercel', icon: VercelIcon},
+        ],
+        links: [
+            {
+                name: 'Website',
+                url: 'https://simplfico-tu-trabajo.vercel.app',
+                icon: GlobeIcon
             }
         ]
     },

@@ -29,6 +29,9 @@ import DockerIcon from "./DockerIcon.svelte";
 import PostgreSqlIcon from "./PostgreSQLIcon.svelte";
 import SwaggerIcon from "./SwaggerIcon.svelte";
 import OpenBookIcon from "./OpenBookIcon.svelte";
+import BitsUiIcon from "./BitsUIIcon.svelte";
+import VercelIcon from "./VercelIcon.svelte";
+import GlobeIcon from "./GlobeIcon.svelte";
 
 export {
     // Normal Icons
@@ -39,6 +42,7 @@ export {
     MenuIcon,
     DownloadIcon,
     LogoIcon,
+    GlobeIcon,
 
     // Tech Icons
     HtmlIcon,
@@ -64,5 +68,7 @@ export {
     DockerIcon,
     PostgreSqlIcon,
     SwaggerIcon,
-    OpenBookIcon
+    OpenBookIcon,
+    BitsUiIcon,
+    VercelIcon,
 }

@@ -1,0 +1,10 @@
+<script lang="ts">
+	const { width = '24', height = width } = $props();
+</script>
+
+<svg xmlns="http://www.w3.org/2000/svg" {width} {height} viewBox="0 0 128 128"
+	><path
+		style="fill-rule:nonzero;fill:#000;fill-opacity:1"
+		d="M63.984 17.184 127.964 128H0Zm0 0"
+	/></svg
+>
