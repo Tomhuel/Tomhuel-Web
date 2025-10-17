@@ -140,7 +140,7 @@ export const PROJECTS: IProject[] = [
         links: [
             {
                 name: 'Website',
-                url: 'https://simplfico-tu-trabajo.vercel.app',
+                url: 'https://simplificotutrabajo.es',
                 icon: GlobeIcon
             }
         ]

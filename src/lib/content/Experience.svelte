@@ -13,12 +13,21 @@
 
 	const experiences: IExperience[] = [
 		{
+			startDate: 'September 2025',
+			endDate: 'Present',
+			company: 'Domino\'S Pizza',
+			title: 'Store assistant',
+			description:
+				'Currently working part-time at Domino’s Pizza as a side job while continuing to develop my personal projects and professional skills.',
+			link: 'https://www.dominospizza.es/'
+		},
+		{
 			startDate: 'May 2024',
 			endDate: 'February 2025',
 			company: 'Healthy Fun Tech S.L',
-			title: 'Web Developer',
+			title: 'Software Developer',
 			description:
-				'We were developing a product with the aim of promoting the reduction of obesity, improving healthy habits, recycling and many other things with our interactive and educational games. I\'m the developer that did most of the app, website and deploy. The technologies used in this work are: Wordpress, PHP, MySQL, OpenLiteSpeed, Bootstrap 5, Webpack, JavaScript and various libraries.',
+				'We were developing a product with the aim of promoting the reduction of obesity, improving healthy habits, recycling and many other things with our interactive and educational games. I\'m the developer that did most of the app, website, deploy and testing. The technologies used in this work are: Wordpress, PHP, MySQL, OpenLiteSpeed, Bootstrap 5, Webpack, JavaScript and various libraries.',
 			link: 'https://healthyfun.app/'
 		},
 		{
