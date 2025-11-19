@@ -15,8 +15,8 @@
 		{
 			startDate: 'September 2025',
 			endDate: 'Present',
-			company: 'Domino\'S Pizza',
-			title: 'Store assistant',
+			company: "Domino'S Pizza",
+			title: 'Kitchen Responsible',
 			description:
 				'Currently working part-time at Domino’s Pizza as a side job while continuing to develop my personal projects and professional skills.',
 			link: 'https://www.dominospizza.es/'
@@ -27,7 +27,7 @@
 			company: 'Healthy Fun Tech S.L',
 			title: 'Software Developer',
 			description:
-				'We were developing a product with the aim of promoting the reduction of obesity, improving healthy habits, recycling and many other things with our interactive and educational games. I\'m the developer that did most of the app, website, deploy and testing. The technologies used in this work are: Wordpress, PHP, MySQL, OpenLiteSpeed, Bootstrap 5, Webpack, JavaScript and various libraries.',
+				"We were developing a product with the aim of promoting the reduction of obesity, improving healthy habits, recycling and many other things with our interactive and educational games. I'm the developer that did most of the app, website, deploy and testing. The technologies used in this work are: Wordpress, PHP, MySQL, OpenLiteSpeed, Bootstrap 5, Webpack, JavaScript and various libraries.",
 			link: 'https://healthyfun.app/'
 		},
 		{
@@ -46,6 +46,7 @@
 			title: 'Volunteer | Teams Coordinator',
 			description:
 				'Colaborating with the association of multiple intelligences Cerebritos since I was 14 years old. I have been a monitor in multiple activities with children and young people related to intelligences and technologies such as robotics. Co-design, organization, execution of workshops and training are just some of my functions in this association.',
+			link: 'https://cerebritos.org'
 		}
 	];
 </script>
@@ -68,15 +69,15 @@
 				<h3 class="text-lg font-semibold text-gray-900 dark:text-white">
 					{experience.title}
 				</h3>
-				<h4 class="text-gray-200 mb-2">{experience.company}</h4>
-				<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty">
+				<h4 class="mb-2 text-gray-200">{experience.company}</h4>
+				<p class="mb-4 text-pretty text-base font-normal text-gray-500 dark:text-gray-400">
 					{experience.description}
 				</p>
 				{#if experience.link}
 					<a
 						href={experience.link}
 						target="_blank"
-						class="focus:text-light inline-flex items-center rounded-lg border border-gray-600  px-4 py-2 text-sm font-medium text-gray-400 hover:bg-zinc-900 hover:text-lightblue focus:z-10 focus:outline-none focus:ring-1 focus:ring-lightblue transition-[color] duration-700"
+						class="focus:text-light inline-flex items-center rounded-lg border border-gray-600 px-4 py-2 text-sm font-medium text-gray-400 transition-[color] duration-700 hover:bg-zinc-900 hover:text-lightblue focus:z-10 focus:outline-none focus:ring-1 focus:ring-lightblue"
 						>See more<svg
 							class="ms-2 h-3 w-3 rtl:rotate-180"
 							aria-hidden="true"
