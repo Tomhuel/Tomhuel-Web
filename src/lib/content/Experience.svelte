@@ -15,10 +15,18 @@
 		{
 			startDate: 'September 2025',
 			endDate: 'Present',
+			company: "Lucky Helados",
+			title: 'Ice cream vendor',
+			description:
+				'Currently working part-time as ice cream vendor as a sidejob.'
+		},
+		{
+			startDate: 'September 2025',
+			endDate: 'December 2025',
 			company: "Domino'S Pizza",
 			title: 'Kitchen Responsible',
 			description:
-				'Currently working part-time at Domino’s Pizza as a side job while continuing to develop my personal projects and professional skills.',
+				'I\ve worked there as a sidejob where I developed a lot of softskills and teamworking.',
 			link: 'https://www.dominospizza.es/'
 		},
 		{
