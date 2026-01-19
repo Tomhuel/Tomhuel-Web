@@ -13,7 +13,7 @@
 
 	const experiences: IExperience[] = [
 		{
-			startDate: 'September 2025',
+			startDate: 'December 2025',
 			endDate: 'Present',
 			company: "Lucky Helados",
 			title: 'Ice cream vendor',
@@ -26,7 +26,7 @@
 			company: "Domino'S Pizza",
 			title: 'Kitchen Responsible',
 			description:
-				'I\ve worked there as a sidejob where I developed a lot of softskills and teamworking.',
+				'I\'ve worked there as a sidejob where I developed a lot of softskills and teamworking.',
 			link: 'https://www.dominospizza.es/'
 		},
 		{
