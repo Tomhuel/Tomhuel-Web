@@ -1,4 +1,5 @@
 import type { IProject } from "$lib/types/Project";
+import TailwindCSSIcon from '$lib/icons/TailwindCSSIcon.svelte';
 import {
     CssIcon,
     HtmlIcon,
@@ -28,15 +29,17 @@ import {
     OpenBookIcon,
     BitsUiIcon,
     VercelIcon,
-    GlobeIcon
+    GlobeIcon,
+    SupabaseIcon
 } from '$lib/icons';
 
 
 export const PROJECTS: IProject[] = [
     {
         title: 'Tao Mod Manager',
+        type: 'Side project',
         description:
-            "Tao Mod Manager it's a desktop app developer in Electron for inject, manage and execute 3D models in Genshin Impact game.",
+            "TaoModManager is a desktop app built with Electron that allows users to manage, decompress, and handle 3D models for Genshin Impact in a controlled environment. The application integrates an external injector tool (not developed by me), provides automatic updates by detecting new GitHub releases, and focuses on delivering a polished, user-friendly interface for mod management. This project showcases desktop development, Electron integration, workflow automation, and update management, while emphasizing responsible usage and clear legal disclaimers in the documentation.",
         thumbnail: '/thumbnails/tao-mod-manager.png',
         technologies: [
             { name: 'HTML', icon: HtmlIcon },
@@ -66,9 +69,34 @@ export const PROJECTS: IProject[] = [
         ]
     },
     {
-        title: 'Groovebox',
+        title: 'Cerebritos',
+        type: 'Work project',
         description:
-            "Groovebox it's the final project of my studies. It's a web for download, manage, share and listening mixes produced by DJ's with high quality.",
+            "Cerebritos is a gamified educational platform where students can participate in events, track achievements, and redeem rewards, blending learning with motivation. The system supports public and private data visibility, giving students control over their profiles while allowing administrators and monitors to manage content securely. Developed with a modern full-stack architecture, it includes a relational database design, achievement tracking, event management, and a reward system. This project demonstrates skills in database modeling, API design, user management, and gamification, with a strong focus on maintainable and scalable practices.",
+        thumbnail: '/thumbnails/cerebritos.png',
+        technologies: [
+            { name: 'HTML', icon: HtmlIcon },
+            { name: 'CSS', icon: CssIcon },
+            { name: 'TypeScript', icon: TsIcon },
+            { name: 'TailwindCSS', icon: TailwindCSSIcon },
+            { name: 'SvelteKit', icon: SvelteIcon },
+            { name: 'NodeJS', icon: NodeJsIcon },
+            { name: 'Supabase', icon: SupabaseIcon },
+            { name: 'PostgreSQL', icon: PostgreSqlIcon },
+        ],
+        links: [
+            {
+                name: 'Website',
+                url: 'https://cerebritos.org',
+                icon: GlobeIcon
+            }
+        ]
+    },
+    {
+        title: 'Groovebox',
+        type: 'Work project',
+        description:
+            "Final project of my Advanced Web Development program. GrooveBox is a web platform where DJs can upload high-quality audio files (public or private), create and share “Mixlists” (playlists), and allow others to download their mixes. The platform includes user authentication, customizable profiles, and interactive music management. Developed primarily with Laravel and Livewire, it demonstrates full-stack skills with focus on usability and real-time interactivity.",
         thumbnail: '/thumbnails/groovebox.png',
         technologies: [
             { name: 'HTML', icon: HtmlIcon },
@@ -93,9 +121,10 @@ export const PROJECTS: IProject[] = [
         ]
     },
     {
-        title: 'Cerebritos',
+        title: 'Cerebritos (Legacy Full-Stack Version)',
+        type: 'Work project',
         description:
-            "We're developing a platform for children with the purpose of try motivate them to improve with different activities, where they can get codes to redeem and get points to exchange for prizes.",
+            "Initial version of Cerebritos, a gamified educational platform built with Laravel and Next.js. This version focused on validating the core idea and user flows. It later evolved into a redesigned architecture with improved scalability and data modeling. This project helped me understand the challenges of separating services and designing scalable architectures.",
         thumbnail: '/thumbnails/cerebritos.png',
         technologies: [
             { name: 'HTML', icon: HtmlIcon },
@@ -112,7 +141,7 @@ export const PROJECTS: IProject[] = [
         links: [
             {
                 name: 'Github',
-                url: 'https://github.com/Tomhuel/Cerebritos',
+                url: 'https://github.com/Tomhuel/CerebritosApp',
                 icon: GithubIcon
             },
             {
@@ -124,8 +153,9 @@ export const PROJECTS: IProject[] = [
     },
     {
         title: 'Simplifico tu trabajo',
+        type: 'Work project',
         description:
-            "Minimalist website designed for a client to showcase their services and convert visitors into customers.",
+            "Professional website built for a real client focused on productivity and business automation. The project aimed to deliver a clean, conversion-focused landing page that clearly communicates value while maintaining strong performance and responsiveness. A real-world freelance project where the focus was aligning technical execution with business needs and user clarity.",
         thumbnail: '/thumbnails/simplifico-tu-trabajo.png',
         technologies: [
             { name: 'HTML', icon: HtmlIcon },
@@ -147,8 +177,9 @@ export const PROJECTS: IProject[] = [
     },
     {
         title: "School's API",
+        type: 'Side project',
         description:
-            'API REST with good practices to learn Spring Boot, Spring Data, Spring Security and Postman Integration Tests.',
+            'Spring Boot REST API designed as a learning project to explore Java backend development with production-oriented practices. Built with Spring Boot, Spring Data, and introductory Spring Security, the project focuses on clean architecture, layered design, and maintainability. It includes OpenAPI (Swagger) documentation and Postman integration tests, and implements a modular CRUD over multiple related entities, ready to support real business logic.',
         thumbnail: '/thumbnails/schoolsapi.png',
         technologies: [
             { name: 'Java', icon: JavaIcon },
@@ -173,7 +204,8 @@ export const PROJECTS: IProject[] = [
     },
     {
         title: 'TaoBot',
-        description: 'Discord Bot',
+        type: 'Fun project',
+        description: 'A lightweight Discord bot built as a fun side project to explore real-time systems and TypeScript best practices. The bot reacts to slash commands and message events, persisting data in a database and experimenting with modular architecture. It was used to learn webhooks, event-driven design, and scalable bot structure while keeping a playful and experimental approach.',
         thumbnail: '/thumbnails/taobot.png',
         technologies: [
             { name: 'TypeScript', icon: TsIcon },

@@ -50,10 +50,10 @@
 		{
 			startDate: 'October 2017',
 			endDate: 'Currently',
-			company: 'Entrenando Cerebritos',
-			title: 'Volunteer | Teams Coordinator',
+			company: 'Cerebritos',
+			title: 'Tech Lead | Main Monitor | Teams Coordinator',
 			description:
-				'Colaborating with the association of multiple intelligences Cerebritos since I was 14 years old. I have been a monitor in multiple activities with children and young people related to intelligences and technologies such as robotics. Co-design, organization, execution of workshops and training are just some of my functions in this association.',
+				'Colaborating with the association of multiple intelligences Cerebritos since I was 14 years old. I have been a monitor in multiple activities with children and young people related to intelligences and technologies such as robotics. Co-design, organization, execution of workshops and training are just some of my functions in this association. Currently, I am the tech lead of the association, where I am responsible for the development and maintenance of the website and application and the internal tools of the association. I usually coordinate part of the teams of monitors and volunteers.',
 			link: 'https://cerebritos.org'
 		}
 	];

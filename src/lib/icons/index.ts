@@ -32,6 +32,7 @@ import OpenBookIcon from "./OpenBookIcon.svelte";
 import BitsUiIcon from "./BitsUIIcon.svelte";
 import VercelIcon from "./VercelIcon.svelte";
 import GlobeIcon from "./GlobeIcon.svelte";
+import SupabaseIcon from "./SupabaseIcon.svelte";
 
 export {
     // Normal Icons
@@ -71,4 +72,5 @@ export {
     OpenBookIcon,
     BitsUiIcon,
     VercelIcon,
+    SupabaseIcon,
 }

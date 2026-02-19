@@ -12,7 +12,7 @@
 	const updateVisibleCount = () => {
 		const width = window.innerWidth;
 		if (width >= 1536) {
-			visibleCount = 3; // 2xl
+			visibleCount = 2; // 2xl
 		} else if (width >= 1024) {
 			visibleCount = 4; // md
 		}
@@ -26,7 +26,7 @@
 
 <Section classname="pt-12 md:px-12 2xl:px-60 pb-24 text-white">
 	<span class="font-cyber text-3xl">Projects</span>
-	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 2xl:grid-cols-3">
+	<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 		{#each preview ? PROJECTS.slice(0, visibleCount) : PROJECTS as project}
 			<ProjectCard {preview} {project}></ProjectCard>
 		{/each}

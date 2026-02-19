@@ -13,6 +13,7 @@
 	</div>
 	<div class="flex h-full w-full flex-col items-start justify-between mt-4">
 		<h3 class="text-lg font-semibold">{project.title}</h3>
+		<span class="mt-1 text-xs font-medium text-gray-400">{project.type}</span>
 		<p class="mt-2 text-pretty text-sm font-normal text-gray-500">{project.description}</p>
 		<div class="flex h-full w-full flex-col justify-between">
 			<div class="mt-4 flex w-full flex-wrap items-center justify-center gap-4">

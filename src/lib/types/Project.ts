@@ -2,6 +2,7 @@ import type { Component } from "svelte";
 
 export interface IProject {
     title: string;
+    type: 'Side project' | 'Work project' | 'Fun project';
     thumbnail: string;
     technologies: ITechnology[];
     description: string;
