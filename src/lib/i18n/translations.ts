@@ -149,7 +149,7 @@ export const translations = {
 	es: {
 		// Navigation
 		nav: {
-			about: 'Acerca de',
+			about: 'Sobre mí',
 			projects: 'Proyectos',
 			experience: 'Experiencia',
 			home: 'Inicio'
@@ -164,7 +164,7 @@ export const translations = {
 		},
 		// About page
 		about: {
-			title: 'Acerca de Mí',
+			title: 'Sobre mí',
 			// Journey section
 			journey: {
 				title: 'Mi Viaje',
