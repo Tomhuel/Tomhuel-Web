@@ -4,9 +4,17 @@
 	import getCurrentDatetime from '../../utils/getCurrentDatetime';
 	import NeonText from '$lib/components/ui/Neon/NeonText.svelte';
 	import StatusBubble from '$lib/components/ui/StatusBubble/StatusBubble.svelte';
+	import { language } from '$lib/stores/language';
+	import { getTranslation } from '$lib/i18n/translations';
+
+	const currentLang = $derived($language);
+	
+	function t(key: string) {
+		return getTranslation(currentLang, key);
+	}
 
 	const workAvaiable = true;
-	let currentTime = getCurrentDatetime();
+	let currentTime = $state(getCurrentDatetime());
 	let interval: number;
 
 	onMount(() => {
@@ -18,6 +26,11 @@
 	onDestroy(() => {
 		clearInterval(interval);
 	});
+
+	const greeting = $derived(t('home.greeting'));
+	const role = $derived(t('home.role'));
+	const workStatusText = $derived(workAvaiable ? t('common.workStatusAvailable') : t('common.workStatusUnavailable'));
+	const discoverText = $derived(t('common.discoverJourney'));
 </script>
 
 <Section>
@@ -34,7 +47,7 @@
 			</div>
 			<div class="flex flex-col items-start justify-start gap-4 text-left text-white">
 				<div class="flex w-full flex-col gap-2 font-cyber">
-					<NeonText text="Tomhuel" textClasses="text-4xl" containerClasses="-z-10"></NeonText>
+					<NeonText text={greeting} textClasses="text-4xl" containerClasses="-z-10"></NeonText>
 					<div class="flex gap-4 pb-4 pt-2 flex-wrap">
 						<StatusBubble
 							text={currentTime}
@@ -44,14 +57,14 @@
 						/>
 						{#if workAvaiable}
 							<StatusBubble
-								text="Work Status: Available"
+								text={workStatusText}
 								bgColor="bg-green-500"
 								textColor="text-green-100"
 								circleColor="#0f0"
 							/>
 						{:else}
 							<StatusBubble
-								text="Work Status: Unavailable"
+								text={workStatusText}
 								bgColor="bg-red-500"
 								textColor="text-red-100"
 								circleColor="#f00"
@@ -60,17 +73,12 @@
 					</div>
 				</div>
 				<h4 class="text-xl font-normal">
-					I'm a <span class="text-light-pink">software developer</span> with 1 year of experience,
-					passionate about creating, share and learn from the
-					<span class="text-light-pink">challenges</span>
-					that come my way. Although my interest is focused on
-					<span class="text-light-pink">backend development</span>, I consider myself a flexible
-					person and capable of tackling tasks in any area of development.
+					{@html t('home.description')}
 				</h4>
 				<a
 					href="/about"
 					class="focus:text-light inline-flex items-center rounded-lg border border-gray-600 px-4 py-2 text-sm font-medium text-gray-400 hover:text-light-pink hover:bg-zinc-900 focus:z-10 focus:outline-none focus:ring-1 focus:ring-lightblue transition-[color] duration-700"
-					>Discover my journey<svg
+					>{discoverText}<svg
 						class="ms-2 h-3 w-3 rtl:rotate-180"
 						aria-hidden="true"
 						xmlns="http://www.w3.org/2000/svg"
