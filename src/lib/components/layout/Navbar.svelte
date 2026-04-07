@@ -1,7 +1,16 @@
 <script lang="ts">
 	import { MenuIcon, MailIcon, GithubIcon, LinkedinIcon, LogoIcon } from '$lib/icons';
+	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 	import type { Component } from 'svelte';
 	import { isMenuExpanded } from '$lib/stores/expanded';
+	import { language } from '$lib/stores/language';
+	import { getTranslation } from '$lib/i18n/translations';
+
+	const currentLang = $derived($language);
+	
+	function t(key: string) {
+		return getTranslation(currentLang, key);
+	}
 
 	const logoWidth = '36';
 
@@ -59,22 +68,23 @@
 					<a
 						href="/about"
 						class="px-4 font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-						>About</a
+						>{t('nav.about')}</a
 					>
 					<a
 						href="/projects"
 						class="px-4 font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-						>Projects</a
+						>{t('nav.projects')}</a
 					>
 					<a
 						href="/#experience"
 						class="px-4 font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-						>Experience</a
+						>{t('nav.experience')}</a
 					>
 				</div>
 			</div>
 		</div>
 		<div class="hidden items-center justify-center gap-2 text-white lg:flex">
+			<LanguageSwitcher />
 			{#each links as link}
 				{@const Icon = link.icon}
 				<a
@@ -101,24 +111,27 @@
 						<a href="/" class="flex items-center justify-center" onclick={collapse}>
 							<LogoIcon width={logoWidth} className="hover:scale-110 transition-transform duration-[600ms]" />
 						</a>
-						<button class="text-white" onclick={collapse} aria-label="toggle menu">
-							<MenuIcon />
-						</button>
+						<div class="flex items-center gap-4">
+							<LanguageSwitcher />
+							<button class="text-white" onclick={collapse} aria-label="toggle menu">
+								<MenuIcon />
+							</button>
+						</div>
 					</div>
 					<a
 						href="/about"
 						class="w-full font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-						onclick={collapse}>About</a
+						onclick={collapse}>{t('nav.about')}</a
 					>
 					<a
 						href="/projects"
 						class="w-full font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-						onclick={collapse}>Projects</a
+						onclick={collapse}>{t('nav.projects')}</a
 					>
 					<a
 						href="/#experience"
 						class="w-full font-cyber text-xl text-white transition-colors duration-500 hover:text-lightblue"
-						onclick={collapse}>Experience</a
+						onclick={collapse}>{t('nav.experience')}</a
 					>
 				</div>
 				<div class="my-8 flex items-center justify-center gap-8 text-white lg:hidden">

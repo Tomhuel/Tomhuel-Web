@@ -1,12 +1,10 @@
 <script lang="ts">
 	const { text, containerClasses = '', textClasses = '' } = $props();
 
-	// TODO: Select text-color && Decide if neon-container hover change text-color
-
-	const letters = [...text].map((char, index) => ({
+	const letters = $derived([...text].map((char, index) => ({
 		char,
 		delay: index * 0.2
-	}));
+	})));
 
 	let resolvedTextClasses = $derived(textClasses || 'text-5xl opacity-100');
 </script>

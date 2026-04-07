@@ -1,6 +1,14 @@
 <script lang="ts">
 	import Section from '$lib/components/layout/Section.svelte';
 	import { isMenuExpanded } from '$lib/stores/expanded';
+	import { language } from '$lib/stores/language';
+	import { getTranslation } from '$lib/i18n/translations';
+
+	const currentLang = $derived($language);
+
+	function t(key: string) {
+		return getTranslation(currentLang, key);
+	}
 
 	interface IExperience {
 		startDate: string;
@@ -11,56 +19,79 @@
 		link?: string;
 	}
 
-	const experiences: IExperience[] = [
+	const experience1_startDate = $derived(`${t('common.months.december')} 2025`);
+	const experience1_endDate = $derived(t('common.present'));
+	const experience1_title = $derived(t('experience.items.luckyHelados.title'));
+	const experience1_description = $derived(t('experience.items.luckyHelados.description'));
+
+	const experience2_startDate = $derived(`${t('common.months.september')} 2025`);
+	const experience2_endDate = $derived(`${t('common.months.december')} 2025`);
+	const experience2_title = $derived(t('experience.items.dominos.title'));
+	const experience2_description = $derived(t('experience.items.dominos.description'));
+
+	const experience3_startDate = $derived(`${t('common.months.may')} 2024`);
+	const experience3_endDate = $derived(`${t('common.months.february')} 2025`);
+	const experience3_title = $derived(t('experience.items.healthyFun.title'));
+	const experience3_description = $derived(t('experience.items.healthyFun.description'));
+
+	const experience4_startDate = $derived(`${t('common.months.march')} 2023`);
+	const experience4_endDate = $derived(`${t('common.months.may')} 2023`);
+	const experience4_title = $derived(t('experience.items.eagora.title'));
+	const experience4_description = $derived(t('experience.items.eagora.description'));
+
+	const experience5_startDate = $derived(`${t('common.months.october')} 2017`);
+	const experience5_endDate = $derived(t('common.present'));
+	const experience5_title = $derived(t('experience.items.cerebritos.title'));
+	const experience5_description = $derived(t('experience.items.cerebritos.description'));
+
+	const experiences = $derived([
 		{
-			startDate: 'December 2025',
-			endDate: 'Present',
-			company: "Lucky Helados",
-			title: 'Ice cream vendor',
-			description:
-				'Currently working part-time as ice cream vendor as a sidejob.'
+			startDate: experience5_startDate,
+			endDate: experience5_endDate,
+			company: 'Cerebritos',
+			title: experience5_title,
+			description: experience5_description,
+			link: 'https://cerebritos.org'
 		},
 		{
-			startDate: 'September 2025',
-			endDate: 'December 2025',
-			company: "Domino'S Pizza",
-			title: 'Kitchen Responsible',
-			description:
-				'I\'ve worked there as a sidejob where I developed a lot of softskills and teamworking.',
+			startDate: experience1_startDate,
+			endDate: experience1_endDate,
+			company: 'Lucky Helados',
+			title: experience1_title,
+			description: experience1_description
+		},
+		{
+			startDate: experience2_startDate,
+			endDate: experience2_endDate,
+			company: "Domino's Pizza",
+			title: experience2_title,
+			description: experience2_description,
 			link: 'https://www.dominospizza.es/'
 		},
 		{
-			startDate: 'May 2024',
-			endDate: 'February 2025',
+			startDate: experience3_startDate,
+			endDate: experience3_endDate,
 			company: 'Healthy Fun Tech S.L',
-			title: 'Software Developer',
-			description:
-				"We were developing a product with the aim of promoting the reduction of obesity, improving healthy habits, recycling and many other things with our interactive and educational games. I'm the developer that did most of the app, website, deploy and testing. The technologies used in this work are: Wordpress, PHP, MySQL, OpenLiteSpeed, Bootstrap 5, Webpack, JavaScript and various libraries.",
+			title: experience3_title,
+			description: experience3_description,
 			link: 'https://healthyfun.app/'
 		},
 		{
-			startDate: 'March 2023',
-			endDate: 'May 2023',
+			startDate: experience4_startDate,
+			endDate: experience4_endDate,
 			company: 'eAgora Algoritmo del Cambio',
-			title: 'FullStack Developer',
-			description:
-				'My experience in eAgora is the culmination of my first years of professional training. I have developed tasks as a FullStack developer, being part of a diverse and dynamic team, working for the development of innovative tools at the service of society. The technologies used in this work are: PHP, Bootstrap 5, Laravel, Livewire & MySQL.',
+			title: experience4_title,
+			description: experience4_description,
 			link: 'https://eagora.app'
-		},
-		{
-			startDate: 'October 2017',
-			endDate: 'Currently',
-			company: 'Cerebritos',
-			title: 'Tech Lead | Main Monitor | Teams Coordinator',
-			description:
-				'Colaborating with the association of multiple intelligences Cerebritos since I was 14 years old. I have been a monitor in multiple activities with children and young people related to intelligences and technologies such as robotics. Co-design, organization, execution of workshops and training are just some of my functions in this association. Currently, I am the tech lead of the association, where I am responsible for the development and maintenance of the website and application and the internal tools of the association. I usually coordinate part of the teams of monitors and volunteers.',
-			link: 'https://cerebritos.org'
 		}
-	];
+	]);
+
+	const experienceTitle = $derived(t('experience.title'));
+	const seeMoreText = $derived(t('common.seeMore'));
 </script>
 
 <Section classname="pt-0 md:px-12 2xl:px-60">
-	<span class="font-cyber text-3xl text-white" id="experience">Experience</span>
+	<span class="font-cyber text-3xl text-white" id="experience">{experienceTitle}</span>
 	<ol
 		class="relative mt-4 border-s border-lightblue border-opacity-25 {$isMenuExpanded
 			? '-z-10'
